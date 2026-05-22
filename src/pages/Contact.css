@@ -1,0 +1,21 @@
+/* ============================================================
+   Contact – Estilos
+   ============================================================ */
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+}
+
+.contact-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.contact-subtitle {
+  color: var(--color-text-muted);
+  margin-top: -0.75rem;
+  line-height: 1.5;
+}

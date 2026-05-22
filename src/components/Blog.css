@@ -1,0 +1,80 @@
+/* ============================================================
+   Blog – Estilos
+   ============================================================ */
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.blog-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Formulario de nuevo post */
+.new-post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.new-post-form h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.55rem 0.8rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.93rem;
+  font-family: inherit;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color var(--transition);
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.form-group.error input,
+.form-group.error textarea {
+  border-color: var(--color-error);
+}
+
+.error-msg {
+  font-size: 0.8rem;
+  color: var(--color-error);
+}
+
+/* Grid de posts */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.no-posts {
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+}

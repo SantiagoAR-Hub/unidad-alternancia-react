@@ -1,0 +1,54 @@
+/* ============================================================
+   Services – Estilos
+   ============================================================ */
+
+.services-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.services-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.services-subtitle {
+  color: var(--color-text-muted);
+  margin-top: -0.75rem;
+}
+
+/* Pestañas internas */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0;
+}
+
+.tab-btn {
+  padding: 0.55rem 1.25rem;
+  border: none;
+  background: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.tab-btn:hover {
+  color: var(--color-primary);
+}
+
+.tab-btn.tab-active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  font-weight: 600;
+}
+
+.tab-content {
+  padding-top: 0.5rem;
+}

@@ -1,0 +1,152 @@
+/* ============================================================
+   Variables CSS – Ejercicio 5: Modo Claro / Oscuro
+   Se aplican en :root por defecto (modo claro).
+   La clase .dark en <html> activa el modo oscuro.
+   ============================================================ */
+
+:root {
+  /* Colores modo claro */
+  --color-bg: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-text: #1f2937;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-error: #ef4444;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-nav-bg: #ffffff;
+  --color-nav-shadow: rgba(0, 0, 0, 0.08);
+  --color-card-shadow: rgba(0, 0, 0, 0.06);
+  --color-highlight: #ede9fe;
+
+  /* Tipografía */
+  --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-size-base: 1rem;
+  --radius: 0.5rem;
+  --transition: 0.25s ease;
+}
+
+/* Modo oscuro */
+html.dark {
+  --color-bg: #111827;
+  --color-surface: #1f2937;
+  --color-primary: #818cf8;
+  --color-primary-hover: #a5b4fc;
+  --color-text: #f9fafb;
+  --color-text-muted: #9ca3af;
+  --color-border: #374151;
+  --color-error: #f87171;
+  --color-success: #4ade80;
+  --color-warning: #fbbf24;
+  --color-nav-bg: #1f2937;
+  --color-nav-shadow: rgba(0, 0, 0, 0.4);
+  --color-card-shadow: rgba(0, 0, 0, 0.3);
+  --color-highlight: #312e81;
+}
+
+/* Reset y base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color var(--transition), color var(--transition);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Layout principal */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Botones reutilizables */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius);
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color var(--transition), opacity var(--transition), transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.btn-secondary:hover {
+  opacity: 0.8;
+}
+
+.btn-danger {
+  background-color: var(--color-error);
+  color: #fff;
+}
+
+.btn-danger:hover {
+  opacity: 0.85;
+}
+
+.btn-sm {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.82rem;
+}
+
+/* Tarjetas */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 4px var(--color-card-shadow);
+  padding: 1.5rem;
+  transition: background-color var(--transition), border-color var(--transition);
+}

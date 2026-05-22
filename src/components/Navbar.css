@@ -1,0 +1,83 @@
+/* ============================================================
+   Navbar – Estilos
+   ============================================================ */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 2rem;
+  background-color: var(--color-nav-bg);
+  box-shadow: 0 1px 6px var(--color-nav-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color var(--transition), box-shadow var(--transition);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-right: auto;
+}
+
+.brand-icon {
+  font-size: 1.4rem;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 0.25rem;
+}
+
+/* Estilos de cada enlace de navegación */
+.nav-link {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color var(--transition), background-color var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+  background-color: var(--color-highlight);
+}
+
+/* Clase "active" – enlace de la sección actual */
+.nav-link.active {
+  color: var(--color-primary);
+  background-color: var(--color-highlight);
+  font-weight: 600;
+}
+
+/* Botón de toggle de tema */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.4rem 0.65rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: border-color var(--transition), transform 0.15s;
+  color: var(--color-text);
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+/* Responsive: ocultar texto de marca en pantallas pequeñas */
+@media (max-width: 480px) {
+  .brand-name { display: none; }
+  .navbar { padding: 0.75rem 1rem; }
+  .nav-link { padding: 0.4rem 0.65rem; font-size: 0.88rem; }
+}
